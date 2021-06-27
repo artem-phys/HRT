@@ -28,10 +28,10 @@ The problem statement includes two sets: a set of **R** residents and a set of *
 Each resident r ϵ R must be assigned to only one hospital, and each hospital h ϵ H has its quota q.
 
 Each hospital ranks some residents in the strict order of its preference:
-![HPrefs](/pictures/HPrefs.png)
+![HPrefs](/pictures/Hprefs.png)
 
 Each resident ranks some hospitals in the strict order of their preference:
-![RPrefs](/pictures/HPrefs.png)
+![RPrefs](/pictures/Rprefs.png)
 
 The consistency of the preference lists is that a resident is
 present in the list of preferences of a hospital if and only if
@@ -56,7 +56,7 @@ The solution of this problem is known and is carried out by modifying the Gale/S
 Hospitals/Residents Problem with Ties (HR) is one of the extensions of HR.
 
 Now the order in the preference lists can be non-strict (everywhere below the >= sign implies that equality is achieved in terms of preferences):
-![blocking_pair](/pictures/HPrefs 2.png)
+![blocking_pair](/pictures/Hprefs 2.png)
 
 ## Stabilities definitions
 
@@ -91,7 +91,7 @@ The code implements the generation of random data for setting the problem
 
 Ties are implemented by grouping by sublists - all residents/hospitals from the same sublist are considered equal in this list of preferences
 
-![generate_data](/pictures/generate_data.png)
+![generate_data](/pictures/generated_data.png)
 
 ## Function Find Alternating Path
 
