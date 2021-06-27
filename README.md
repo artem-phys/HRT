@@ -28,10 +28,10 @@ The problem statement includes two sets: a set of **R** residents and a set of *
 Each resident r ϵ R must be assigned to only one hospital, and each hospital h ϵ H has its quota q.
 
 Each hospital ranks some residents in the strict order of its preference:
-![HPrefs](pictures/HPrefs.png)
+![HPrefs](/pictures/HPrefs.png)
 
 Each resident ranks some hospitals in the strict order of their preference:
-![RPrefs](pictures/HPrefs.png)
+![RPrefs](/pictures/HPrefs.png)
 
 The consistency of the preference lists is that a resident is
 present in the list of preferences of a hospital if and only if
@@ -45,7 +45,7 @@ A matching is considered **stable** if there is no such pair (r,h) that are not 
 
 Such a pair is called **"blocking pair"**. For example, below such a pair are resident 2 and hospital 1.
 The latter does not mind taking resident 2 instead of the third, and for resident 2, in turn, hospital 1 is more preferable than hospital 2, to which he is currently assigned:
-![blocking_pair](pictures/blocking pair.png)
+![blocking_pair](/pictures/blocking pair.png)
 
 
 **The task of HR is to find a stable distribution!**
@@ -56,7 +56,7 @@ The solution of this problem is known and is carried out by modifying the Gale/S
 Hospitals/Residents Problem with Ties (HR) is one of the extensions of HR.
 
 Now the order in the preference lists can be non-strict (everywhere below the >= sign implies that equality is achieved in terms of preferences):
-![blocking_pair](pictures/HPrefs 2.png)
+![blocking_pair](/pictures/HPrefs 2.png)
 
 ## Stabilities definitions
 
@@ -91,7 +91,7 @@ The code implements the generation of random data for setting the problem
 
 Ties are implemented by grouping by sublists - all residents/hospitals from the same sublist are considered equal in this list of preferences
 
-![generate_data](pictures/generate_data.png)
+![generate_data](/pictures/generate_data.png)
 
 ## Function Find Alternating Path
 
@@ -99,7 +99,7 @@ Ties are implemented by grouping by sublists - all residents/hospitals from the 
 
 Пример работы функции:
 
-![alternating_path](pictures/alternating_path.png)
+![alternating_path](/pictures/alternating_path.png)
 
 ## Function Find Maximum Matching
 
@@ -116,18 +116,18 @@ In addition, the function finds the critical set Z (see below)
 Let's find the distribution in the graph:
 
 
-![maximum_matching](screenshots/maximum_matching.png)
+![maximum_matching](/pictures/maximum_matching.png)
 
 Example of an iterative step:
 
-![itstep1](pictures/itstep1.png)
+![itstep1](/pictures/itstep1.png)
 
 
 r8 did not get into any hospital. However, if there are still places in h3, then r8 can agree with r4 that he will go not to h2, but to h3, thereby freeing up r8's place in h2.
 
 Mathematically, such a transformation is obtained through the XOR of the current set M with the found alternating path: M⊕p
 
-![itstep2](pictures/itstep2.png)
+![itstep2](/pictures/itstep2.png)
 
 ## Algorithm
 
@@ -140,7 +140,7 @@ Mathematically, such a transformation is obtained through the XOR of the current
 
 The main cycle of the algorithm begins with the preliminary assignment of residents to the head of their list of preferences - i.e. the first sublist of hospitals where they want to go. This information is stored in the provisional assignment graph G, for convenience, it has the form of a table:
 
-![G](screenshots/G.png)
+![G](/pictures/G.png)
 
 ## Removing dominated residents:
 
@@ -151,7 +151,7 @@ already been previously assigned to the hospital and are strictly better than r.
 
 Deleting a pair (r,h) is removing r and h from each other's preference lists (HPrefs and Rprefs) and canceling the negative assignment in G, if there was one.
 
-![dom](pictures/dom.png)
+![dom](/pictures/dom.png)
 
 ## Removing dominated residents:
 After removing the dominated residents, the pre-appointment process from the slide above resumes as long as there are free residents with a non-empty list of preferences
@@ -199,10 +199,10 @@ We calculate the Req-the required number of residents in the distribution for an
 If the answer is positive, it will be the desired highly stable distribution
 In the case of a negative answer, according to the lemma, neither the found one nor any other one will fit, and the result will be displayed on the screen that a strongly stable distribution does not exist
 
-![fa1](pictures/fa1.png)
+![fa1](/pictures/fa1.png)
 
 Example of success of the algorithm:
 
-![success](pictures/success.png)
+![success](/pictures/success.png)
 
 
