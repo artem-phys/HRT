@@ -45,7 +45,8 @@ A matching is considered **stable** if there is no such pair (r,h) that are not 
 
 Such a pair is called **"blocking pair"**. For example, below such a pair are resident 2 and hospital 1.
 The latter does not mind taking resident 2 instead of the third, and for resident 2, in turn, hospital 1 is more preferable than hospital 2, to which he is currently assigned:
-![blocking_pair](/pictures/blocking pair.png)
+
+![blocking](/pictures/blocking pair.png)
 
 
 **The task of HR is to find a stable distribution!**
@@ -56,7 +57,7 @@ The solution of this problem is known and is carried out by modifying the Gale/S
 Hospitals/Residents Problem with Ties (HR) is one of the extensions of HR.
 
 Now the order in the preference lists can be non-strict (everywhere below the >= sign implies that equality is achieved in terms of preferences):
-![Hprefs 2](/pictures/Hprefs 2.png)
+![Hps](/pictures/Hprefs 2.png)
 
 ## Stabilities definitions
 
