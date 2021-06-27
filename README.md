@@ -56,7 +56,7 @@ The solution of this problem is known and is carried out by modifying the Gale/S
 Hospitals/Residents Problem with Ties (HR) is one of the extensions of HR.
 
 Now the order in the preference lists can be non-strict (everywhere below the >= sign implies that equality is achieved in terms of preferences):
-![blocking_pair](/pictures/Hprefs 2.png)
+![Hprefs 2](/pictures/Hprefs 2.png)
 
 ## Stabilities definitions
 
