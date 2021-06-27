@@ -91,7 +91,7 @@ The code implements the generation of random data for setting the problem
 
 Ties are implemented by grouping by sublists - all residents/hospitals from the same sublist are considered equal in this list of preferences
 
-![generate_data](/pictures/generated_data.png)
+![generated_data](/pictures/generated_data.png)
 
 ## Function Find Alternating Path
 
@@ -153,7 +153,6 @@ Deleting a pair (r,h) is removing r and h from each other's preference lists (HP
 
 ![dom](/pictures/dom.png)
 
-## Removing dominated residents:
 After removing the dominated residents, the pre-appointment process from the slide above resumes as long as there are free residents with a non-empty list of preferences
 
 
@@ -170,7 +169,7 @@ A resident is considered tied to hospital h if either the hospital is not full, 
 4. If the revised quota of a hospital has decreased to 0, then we remove the hospital from the graph.
 
 
-# Critical set
+## Critical set
 
 A **critical** set Z (critical set) is the set of residents in GR with the maximum shortage of places in hospitals where they are previously assigned.
 
@@ -186,7 +185,7 @@ According to the pack, the pairs from the tail N (Z) should be removed.
 
 After that, the main loop of the program is started again, and so on until one of the iterations produces an empty critical set
 
-# Final answer 
+## Final answer 
 
 We find a possible distribution in the final graph of preliminary assignments:
 
