@@ -96,9 +96,9 @@ Ties are implemented by grouping by sublists - all residents/hospitals from the 
 
 ## Function Find Alternating Path
 
-Альтернирующий путь относительно подмножества ребёр M (alternating path) - такой путь в графе, рёбра которого поочерёдно то не принадлежат, то принадлежат M
+An alternating path with respect to a subset of edges M is a path in the graph whose edges alternately do not belong to M, then belong to M
 
-Пример работы функции:
+Example of the function operation:
 
 ![alternating_path](/pictures/alternating_path.png)
 
